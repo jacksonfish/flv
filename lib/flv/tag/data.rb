@@ -9,7 +9,7 @@ class FLV
       def data
         @data ||= ScriptDataParser.new(raw_data).parse
       end
-      
+
       def inspect
         "#<#{self.class} #{data.inspect}>"
       end
@@ -54,7 +54,6 @@ class FLV
         meta_data["canSeekToEnd"]
       end
 
-    private
       def meta_data
         data["onMetaData"] || {}
       end
